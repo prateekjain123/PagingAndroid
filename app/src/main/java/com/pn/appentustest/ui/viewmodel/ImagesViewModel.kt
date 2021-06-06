@@ -11,7 +11,7 @@ import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 @HiltViewModel
-class ImagesViewModel @Inject constructor(private val repository: ImagesRepository) : ViewModel() {
+internal class ImagesViewModel @Inject constructor(private val repository: ImagesRepository) : ViewModel() {
 
     fun apiData(): Flow<PagingData<ImagesData>> {
         return repository.getResults().cachedIn(viewModelScope)

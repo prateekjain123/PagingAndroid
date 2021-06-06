@@ -17,7 +17,7 @@ import kotlinx.coroutines.launch
 
 
 @AndroidEntryPoint
-class ImagesListFragment : Fragment(R.layout.fragment_images_list) {
+internal class ImagesListFragment : Fragment(R.layout.fragment_images_list) {
 
     private val viewModel: ImagesViewModel by viewModels()
     private lateinit var binding: FragmentImagesListBinding
